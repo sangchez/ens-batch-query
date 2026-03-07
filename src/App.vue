@@ -1,30 +1,15 @@
 <script setup lang="ts">
-import HelloWorld from './components/HelloWorld.vue'
+// <!-- Router Value Start --->
+// const hash = window.location.hash;
+// const queryString = hash.split("?")[1];
+// const params = new URLSearchParams(queryString);
+// const inviter = params.get("i");
+// const deft = import.meta.env.VITE_DEFAULT_INVITER;
+// console.debug("Inviter:", inviter);
+// window.localStorage.setItem("inviter", inviter || deft);
+// <!-- Router Value End --->
 </script>
 
 <template>
-  <div>
-    <a href="https://vite.dev" target="_blank">
-      <img src="/vite.svg" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://vuejs.org/" target="_blank">
-      <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
-    </a>
-  </div>
-  <HelloWorld msg="Vite + Vue" />
+  <router-view />
 </template>
-
-<style scoped>
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.vue:hover {
-  filter: drop-shadow(0 0 2em #42b883aa);
-}
-</style>
