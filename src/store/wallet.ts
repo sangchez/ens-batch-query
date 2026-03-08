@@ -1,15 +1,8 @@
 // https://v3.vuex.vuejs.org/guide/#the-simplest-store
 
 import { defineStore } from "pinia";
-// import { Address } from "../configs/address";
-
-interface WalletState {
-  refresh: number;
-  isConnected: boolean;
-  account: string | null | undefined;
-  parseAddr: string | null | undefined;
-  isSuport: boolean;
-}
+import type { WalletState } from "../interfaces";
+import { isSupport } from "../config/address";
 
 export const useWalletStore = defineStore<"wallet", WalletState>("wallet", {
   state: () => ({
@@ -17,7 +10,7 @@ export const useWalletStore = defineStore<"wallet", WalletState>("wallet", {
     isConnected: false,
     account: undefined,
     parseAddr: undefined,
-    isSuport: true,
+    isSupport: true,
   }),
   actions: {
     refreshWalletState() {
@@ -32,15 +25,15 @@ export const useWalletStore = defineStore<"wallet", WalletState>("wallet", {
         this.parseAddr = undefined;
       }
 
-      // if (this.isConnected) {
-      //   const currentNetwork = window.ethereum?.chainId as string;
-      //   console.debug("Netwrok: ", currentNetwork);
-      //   this.isSuport = Object.keys(Address).includes(currentNetwork);
-      // } else {
-      //   this.isSuport = true;
-      // }
+      if (this.isConnected) {
+        const currentNetwork = window.ethereum?.chainId as string;
+        console.debug("Netwrok: ", currentNetwork);
+        this.isSupport = isSupport(currentNetwork);
+      } else {
+        this.isSupport = true;
+      }
 
-      console.debug("Account: ", window.ethereum?.selectedAddress);
+      console.log("refresh wallet state");
     },
   },
 });
