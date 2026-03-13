@@ -1,0 +1,45 @@
+{
+  "message": {
+    "summary": {
+      "error": "작업에 실패했습니다",
+      "warn": "작업 알림",
+      "success": "작업에 성공했습니다"
+    },
+    "error": {},
+    "warn": {
+      "ethereum": "테스트 프롬프트",
+      "network": ""
+    },
+    "success": {}
+  },
+  "form": {
+    "searchForm": {
+      "rpcUrlRequired": "유효한 이더리움 RPC 주소를 입력해주세요",
+      "rpcUrlInvalid": "이더리움 RPC 주소 형식이 올바르지 않습니다. 확인 후 다시 입력해주세요",
+      "ensNamesRequired": "유효한 ENS 도메인 이름을 입력해주세요 (여러 개 입력 가능, 한 줄에 하나씩)",
+      "ensNamesInvalid": "ENS 도메인 이름 형식이 올바르지 않습니다. 규격에 맞는 도메인 이름을 입력해주세요"
+    }
+  },
+  "components": {
+    "searchForm": {
+      "header": "ENS 도메인 일괄 조회 도구",
+      "description": "경량화된 ENS 도메인 일괄 조회 도구로, 여러 개의 ENS 도메인 이름 입력을 지원합니다. 한 번의 클릭으로 도메인 소유 주소, 역방향 해석 정보 및 만료 시간을 조회할 수 있으며, 조회 결과는 CSV 파일로 내보낼 수 있어 효율적이고 편리합니다.",
+      "rpcPlaceholder": "이더리움 RPC 주소를 입력해주세요",
+      "ensPlaceholder": "ENS 도메인 이름을 입력해주세요 (여러 개 입력 가능, 한 줄에 하나씩)",
+      "searchButton": "즉시 조회"
+    },
+    "dataToolbar": {
+      "export": "데이터 내보내기",
+      "confirm": "현재 모든 조회 기록을 삭제하시겠습니까? 삭제 후 복구할 수 없습니다.",
+      "accept": "삭제 확인",
+      "reject": "작업 취소"
+    },
+    "ensDataTable": {
+      "domain": "ENS 도메인",
+      "owner": "소유 주소",
+      "expiry": "만료 시간",
+      "empty": "조회 데이터가 없습니다. 먼저 조회 작업을 실행해주세요",
+      "unregister": "미등록"
+    }
+  }
+}

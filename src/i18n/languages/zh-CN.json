@@ -1,0 +1,45 @@
+{
+  "message": {
+    "summary": {
+      "error": "操作失败",
+      "warn": "操作提醒",
+      "success": "操作成功"
+    },
+    "error": {},
+    "warn": {
+      "ethereum": "测试提示",
+      "network": ""
+    },
+    "success": {}
+  },
+  "form": {
+    "searchForm": {
+      "rpcUrlRequired": "请输入有效的以太坊 RPC 地址",
+      "rpcUrlInvalid": "以太坊 RPC 地址格式不正确，请检查后重新输入",
+      "ensNamesRequired": "请输入有效的 ENS 域名（可输入多个，每行一个）",
+      "ensNamesInvalid": "ENS 域名格式不正确，请输入符合规范的域名"
+    }
+  },
+  "components": {
+    "searchForm": {
+      "header": "ENS 域名批量查询工具",
+      "description": "轻量级 ENS 域名批量查询工具，支持输入多个 ENS 域名，一键查询域名持有地址、反向解析信息及过期时间，查询结果可导出为 CSV 文件，高效便捷。",
+      "rpcPlaceholder": "请输入以太坊 RPC 地址",
+      "ensPlaceholder": "请输入 ENS 域名（可输入多个，每行一个）",
+      "searchButton": "查询"
+    },
+    "dataToolbar": {
+      "export": "导出数据",
+      "confirm": "确认删除当前所有查询记录吗？删除后不可恢复。",
+      "accept": "确认删除",
+      "reject": "取消操作"
+    },
+    "ensDataTable": {
+      "domain": "ENS 域名",
+      "owner": "持有地址",
+      "expiry": "过期时间",
+      "empty": "暂无查询数据，请先执行查询操作",
+      "unregister": "未注册"
+    }
+  }
+}
