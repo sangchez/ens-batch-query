@@ -1,1 +1,45 @@
-{}
+{
+  "message": {
+    "summary": {
+      "error": "操作失敗",
+      "warn": "操作提醒",
+      "success": "操作成功"
+    },
+    "error": {},
+    "warn": {
+      "ethereum": "測試提示",
+      "network": ""
+    },
+    "success": {}
+  },
+  "form": {
+    "searchForm": {
+      "rpcUrlRequired": "請輸入有效的以太坊 RPC 位址",
+      "rpcUrlInvalid": "以太坊 RPC 位址格式不正確，請確認後重新輸入",
+      "ensNamesRequired": "請輸入有效的 ENS 網域名稱（可輸入多個，每行一個）",
+      "ensNamesInvalid": "ENS 網域名稱格式不正確，請輸入符合規範的網域名稱"
+    }
+  },
+  "components": {
+    "searchForm": {
+      "header": "ENS 網域名稱批次查詢工具",
+      "description": "輕量級 ENS 網域名稱批次查詢工具，支援輸入多個 ENS 網域名稱，一鍵查詢網域持有位址、反向解析資訊及過期時間，查詢結果可匯出為 CSV 檔案，高效便捷。",
+      "rpcPlaceholder": "請輸入以太坊 RPC 位址",
+      "ensPlaceholder": "請輸入 ENS 網域名稱（可輸入多個，每行一個）",
+      "searchButton": "查詢"
+    },
+    "dataToolbar": {
+      "export": "匯出資料",
+      "confirm": "確認刪除目前所有查詢紀錄嗎？刪除後無法復原。",
+      "accept": "確認刪除",
+      "reject": "取消操作"
+    },
+    "ensDataTable": {
+      "domain": "ENS 網域名稱",
+      "owner": "持有位址",
+      "expiry": "過期時間",
+      "empty": "暫無查詢資料，請先執行查詢操作",
+      "unregister": "未註冊"
+    }
+  }
+}

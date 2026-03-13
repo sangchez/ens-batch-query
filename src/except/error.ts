@@ -10,3 +10,14 @@ export class DappError extends Error {
     this.type = type || "error";
   }
 }
+
+export const ResolverMessage = {
+  rpcUrl: {
+    required: [{ message: t("form.searchForm.rpcUrlRequired") }],
+    invalid: [{ message: t("form.searchForm.rpcUrlInvalid") }],
+  },
+  ensNames: {
+    required: [{ message: t("form.searchForm.ensNamesRequired") }],
+    invalid: [{ message: t("form.searchForm.ensNamesInvalid") }],
+  },
+};

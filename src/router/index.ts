@@ -8,7 +8,7 @@ const routerOptions: RouterOptions = {
   routes: [
     {
       path: "/",
-      component: () => import("../views/layouts/Default.vue"),
+      component: () => import("../layouts/DefaultLayout.vue"),
       children: [
         {
           path: "",

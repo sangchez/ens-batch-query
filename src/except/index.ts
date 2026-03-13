@@ -1,18 +1,29 @@
 import type { App } from "vue";
+import { t } from "../i18n";
 import { DappError } from "./error";
+import ToastEventBus from "primevue/toasteventbus";
 
 export default {
   install(app: App) {
     app.config.errorHandler = (err: any) => {
-      console.warn(err.message);
+      let severity = "error";
+      let summary = "Error";
+      let detail = "Unknown";
+
       if (err.code && err.info && err.info.error) {
-        // Todo
-        // ElMessage.error(err.info.error.message);
+        detail = err.info.error.message || detail;
       } else {
-        const t = err instanceof DappError ? err.type : "error";
-        // Todo
-        // (ElMessage as any)[t](err.message);
+        severity = err instanceof DappError ? err.type : "error";
+        summary = t(`message.summary.${severity}`);
+        detail = err.message || detail;
       }
+
+      ToastEventBus.emit("add", {
+        severity,
+        summary,
+        detail,
+        life: 3000,
+      });
     };
   },
 };

@@ -3,8 +3,8 @@ import App from "./App.vue";
 
 const app = createApp(App);
 
-import { setupTheme } from "./theme";
-setupTheme(app);
+import primevue from "./theme";
+app.use(primevue);
 
 import router from "./router";
 app.use(router);

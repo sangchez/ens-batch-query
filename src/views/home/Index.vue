@@ -1,28 +1,28 @@
 <script setup lang="ts">
 // <!-- Global Variable Start --->
-import { onMounted } from "vue";
+import { useGlobalStore } from "../../store/global";
+const globalStore = useGlobalStore();
 // <!-- Global Variable End --->
 
 // <!-- Global Components Start --->
-import Button from "primevue/button";
+import SearchForm from "../../components/SearchForm.vue";
+import DataToolbar from "../../components/DataToolbar.vue";
+import DataResult from "../../components/DataResult.vue";
 // <!-- Global Components End --->
-
-// <!-- Test Start --->
-import ETHRegistrarController from "../../contracts/ETHRegistrarController";
-
-const test = async () => {
-  const controller = new ETHRegistrarController();
-  const contract = await controller.initialize();
-  const result = await contract.available("test");
-  console.log("Result:", result);
-};
-
-onMounted(() => {
-  test();
-});
-// <!-- Test End --->
 </script>
 
 <template>
-  <Button label="Submit" />
+  <section class="grid grid-cols-12 gap-4">
+    <div class="col-span-12">
+      <SearchForm />
+    </div>
+
+    <div class="col-span-12">
+      <DataToolbar v-model="globalStore.current" />
+    </div>
+
+    <div class="col-span-12">
+      <DataResult />
+    </div>
+  </section>
 </template>

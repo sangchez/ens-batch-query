@@ -1,6 +1,6 @@
 # ENS Batch Query
 
-一个轻量级的批量 ENS 域名查询工具。输入多个 ENS 域名，一键查询持有地址、反向解析和过期时间，并支持导出 CSV。
+轻量级 ENS 域名批量查询工具，支持输入多个 ENS 域名，一键查询域名持有地址、反向解析信息及过期时间，查询结果可导出为 CSV 文件，高效便捷。
 
 ✨ **在线体验**：[点击这里](https://ens-batch-query.vercel.app)（示例链接，部署后替换）
 
@@ -21,10 +21,9 @@
 
 ## 🛠️ 技术栈
 
-- React (Vite)
+- Vue3 (Vite)
 - ethers.js
 - Tailwind CSS（可选，如使用）
-- 托管于 Vercel
 
 ---
 
@@ -38,28 +37,18 @@ git clone https://github.com/sangchez/ens-batch-query.git
 cd ens-batch-query
 
 # 安装依赖
-npm install
+yarn
 
 # 启动开发服务器
-npm run dev
+yarn dev
 ```
 
 访问 `http://localhost:5173` 即可使用。
 
 > ⚠️ 注意：本地运行需要配置 RPC 节点（默认使用公共节点，可能受限）。建议在 `.env` 文件中设置自己的 Infura/Alchemy 节点：
 > ```
-> VITE_ETHEREUM_RPC_URL=https://mainnet.infura.io/v3/你的项目ID
+> VITE_JSON_RPC_URL=https://mainnet.infura.io/v3/你的项目ID
 > ```
-
----
-
-## 📦 部署
-
-本项目为纯静态应用，可一键部署到 Vercel：
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/yourusername/ens-batch-query)
-
-或手动构建并托管至任何静态服务器。
 
 ---
 

@@ -11,3 +11,13 @@ export interface WalletState {
   parseAddr: string | null | undefined;
   isSupport: boolean;
 }
+
+export interface GlobalState {
+  current: number;
+  refresh: number;
+}
+
+export interface GlobalActions {
+  refreshCurrent: (batchId: number) => void;
+  refreshGlobal: () => void;
+}

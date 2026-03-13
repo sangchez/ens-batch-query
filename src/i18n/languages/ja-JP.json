@@ -1,1 +1,45 @@
-{}
+{
+  "message": {
+    "summary": {
+      "error": "操作に失敗しました",
+      "warn": "操作の注意",
+      "success": "操作に成功しました"
+    },
+    "error": {},
+    "warn": {
+      "ethereum": "テストプロンプト",
+      "network": ""
+    },
+    "success": {}
+  },
+  "form": {
+    "searchForm": {
+      "rpcUrlRequired": "有効なイーサリアムRPCアドレスを入力してください",
+      "rpcUrlInvalid": "イーサリアムRPCアドレスの形式が正しくありません。確認して再入力してください",
+      "ensNamesRequired": "有効なENSドメイン名を入力してください（複数入力可、1行に1つ）",
+      "ensNamesInvalid": "ENSドメイン名の形式が正しくありません。仕様に準拠したドメイン名を入力してください"
+    }
+  },
+  "components": {
+    "searchForm": {
+      "header": "ENSドメイン一括照会ツール",
+      "description": "軽量なENSドメイン一括照会ツールで、複数のENSドメイン名の入力に対応しています。ワンクリックでドメイン保有アドレス、リバースリゾルバ情報、有効期限を照会でき、照会結果はCSVファイルとしてエクスポート可能で、効率的かつ便利です。",
+      "rpcPlaceholder": "イーサリアムRPCアドレスを入力してください",
+      "ensPlaceholder": "ENSドメイン名を入力してください（複数入力可、1行に1つ）",
+      "searchButton": "即時照会"
+    },
+    "dataToolbar": {
+      "export": "データをエクスポート",
+      "confirm": "現在のすべての照会レコードを削除しますか？削除後は復元できません。",
+      "accept": "削除を確定",
+      "reject": "操作をキャンセル"
+    },
+    "ensDataTable": {
+      "domain": "ENSドメイン名",
+      "owner": "保有アドレス",
+      "expiry": "有効期限",
+      "empty": "照会データはありません。まず照会操作を実行してください",
+      "unregister": "未登録"
+    }
+  }
+}

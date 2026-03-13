@@ -1,1 +1,45 @@
-{}
+{
+  "message": {
+    "summary": {
+      "error": "Operation Failed",
+      "warn": "Operation Reminder",
+      "success": "Operation Successful"
+    },
+    "error": {},
+    "warn": {
+      "ethereum": "Test Prompt",
+      "network": ""
+    },
+    "success": {}
+  },
+  "form": {
+    "searchForm": {
+      "rpcUrlRequired": "Please enter a valid Ethereum RPC URL",
+      "rpcUrlInvalid": "The Ethereum RPC URL format is incorrect. Please check and re-enter",
+      "ensNamesRequired": "Please enter valid ENS domain names (multiple entries allowed, one per line)",
+      "ensNamesInvalid": "The ENS domain name format is incorrect. Please enter a domain name that complies with the specifications"
+    }
+  },
+  "components": {
+    "searchForm": {
+      "header": "ENS Domain Batch Query Tool",
+      "description": "Lightweight ENS domain batch query tool that supports inputting multiple ENS domain names, one-click query of domain holding addresses, reverse resolution information and expiration time. Query results can be exported as CSV files, which is efficient and convenient.",
+      "rpcPlaceholder": "Please enter Ethereum RPC URL",
+      "ensPlaceholder": "Please enter ENS domain name (multiple entries allowed, one per line)",
+      "searchButton": "Query Now"
+    },
+    "dataToolbar": {
+      "export": "Export Data",
+      "confirm": "Are you sure to delete all current query records? Deletion cannot be undone.",
+      "accept": "Confirm Deletion",
+      "reject": "Cancel Operation"
+    },
+    "ensDataTable": {
+      "domain": "ENS Domain",
+      "owner": "Holding Address",
+      "expiry": "Expiration Time",
+      "empty": "No query data available, please perform a query operation first",
+      "unregister": "Unregistered"
+    }
+  }
+}
