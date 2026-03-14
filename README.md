@@ -23,7 +23,8 @@
 
 - Vue3 (Vite)
 - ethers.js
-- Tailwind CSS（可选，如使用）
+- primevue v4
+- Tailwind CSS
 
 ---
 
