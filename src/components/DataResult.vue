@@ -32,6 +32,13 @@ const loadTabs = () => {
     scrollableTabs.value.push(title);
   }
 
+  scrollableTabs.value = [...scrollableTabs.value].sort(
+    (a: string, b: string) => {
+      if (a < b) return 1;
+      if (a > b) return -1;
+      return 0;
+    },
+  );
   if (scrollableTabs.value.length <= 0) {
     scrollableTabs.value.push("0");
     defaultTab.value = "0";
