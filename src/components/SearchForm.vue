@@ -46,7 +46,6 @@ const resolver = ({ values }: { values: any }) => {
 
 // <!-- Search ENS Start --->
 import { ethers } from "ethers";
-import { ProviderType } from "../config/enums";
 import BaseRegistrar from "../contracts/BaseRegistrar";
 
 import { useGlobalStore } from "../store/global";
