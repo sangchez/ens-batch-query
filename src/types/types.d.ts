@@ -1,3 +1,5 @@
+export type ABIMap = Record<string, string[]>;
+
 export type ENSResult = {
   batchId: string;
   domain: string;

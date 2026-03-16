@@ -1,6 +1,6 @@
 export const ProviderType = {
-  Browser: 0,
-  JsonRPC: 1,
+  Browser: "Browser",
+  JsonRPC: "JsonRPC",
 } as const;
 
 export type ProviderType = (typeof ProviderType)[keyof typeof ProviderType];

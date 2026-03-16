@@ -79,9 +79,9 @@ const searchENS = async ({ valid }: { valid: any }) => {
 
     const { rpcUrl, ensNames } = initialValues.value;
     const provider = new ethers.JsonRpcProvider(rpcUrl);
-    const providerType = ProviderType.JsonRPC;
-    const ensRegistrar = new BaseRegistrar(providerType, rpcUrl);
-    const ensContract = await ensRegistrar.initialize();
+    const ensRegistrar = new BaseRegistrar();
+    const ensContract = await ensRegistrar.getContract(rpcUrl);
+    console.log(ensContract);
 
     const ensNameList = ensNames.trim().split("\n");
     const batchId = new Date().getTime().toString();

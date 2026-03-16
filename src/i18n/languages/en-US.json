@@ -5,7 +5,13 @@
       "warn": "Operation Reminder",
       "success": "Operation Successful"
     },
-    "error": {},
+    "error": {
+      "rpc": "RPC node connection failed or invalid address",
+      "ethereum": "No Ethereum wallet plugin detected in your browser",
+      "network": "Current chain is not supported, please switch to a compatible chain",
+      "address": "Invalid contract address format or non-existent address",
+      "method": "The specified function method was not found in this contract"
+    },
     "warn": {
       "ethereum": "Test Prompt",
       "network": ""

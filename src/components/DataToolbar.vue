@@ -69,7 +69,6 @@ const deleteHistory = () => {
       label: t("components.dataToolbar.accept"),
     },
     accept: () => {
-      console.log(props.modelValue);
       window.localStorage.removeItem(`ENS-${props.modelValue}`);
       globalStore.refreshGlobal();
     },
